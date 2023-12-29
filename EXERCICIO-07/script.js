@@ -4,10 +4,10 @@
 let soma = 0;
 let numero = 10;
 
-do{
+do {
     soma+= numero;
-    numero+= 1;
-    if(soma < 100){
-        document.write(soma+"<br>");
-    }
-}while(soma <= 100)
+    numero++;
+    
+} while(numero <= 100);
+
+document.write("A soma de todos os números entre 10 e 100 é: " + soma);
