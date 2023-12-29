@@ -4,10 +4,10 @@
 // considerar o mês em que a pessoa nasceu).
 
 let anoAtual = 2023;
-let anoPessoa = Number(prompt("digite o ano em que nasceu: "));
+let anoNascimento = Number(prompt("digite o ano em que nasceu: "));
 
-if((anoAtual - anoPessoa) >= 16){
-    document.write("Você pode votar!! Você tem " + (anoAtual - anoPessoa) + " anos")
+if((anoAtual - anoNascimento) >= 16){
+    document.write("Você pode votar!!! Você tem " + (anoAtual - anoNascimento) + " anos")
 }else{
-    document.write("Você não pode votar!!" + (anoAtual - anoPessoa) + " anos")
+    document.write("Você não pode votar!!!" + (anoAtual - anoNascimento) + " anos")
 }

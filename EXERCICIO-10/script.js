@@ -7,7 +7,7 @@
 
 
 let sexo = Number(prompt("1- Feminino e 2 - Masculino: "));
-let altura = Number(prompt("Digite a altura"));
+let altura = Number(prompt("Digite a altura em metros:"));
 let alturaM = (72.7 * altura)-58;
 let alturaF = (62.1 * altura)-44.7;
 

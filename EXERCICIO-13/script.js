@@ -2,11 +2,11 @@
 // números ímpares entre 1 e o número armazenado.
 
 let numero = Number(prompt("digite um número: "));
-let contador = 1;
+let i = 2;
 
-while(contador <= numero ){
-    if(contador % 2 > 0){
-        document.write(contador+"<br>")
+while(i < numero ){
+    if(i % 2 > 0){
+        document.write(i+"<br>")
     }
-    contador++
+    i++
 }

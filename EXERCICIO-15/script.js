@@ -15,18 +15,36 @@
 // d. Triângulo equilátero: possui todos os lados iguais (A=B e
 // B=C);
 
-let a = Number(prompt("Digite o lado A do triangulo: "));
-let b = Number(prompt("Digite o lado B do triangulo: "));
-let c = Number(prompt("Digite o lado C do triangulo: "));
 
-if(a<b && b<a+c && c<a+b){
-    document.write("É um triangulo!");
-} else if((a==b && a!==c) || (a==c && a!==b) || (b==c && b!==a)){
-    document.write("Isósceles!");
-} else if(a!==b && a!==c && b!==c){
-    document.write("Escaleno!");
-} else if (a==b && a==c && b==c){
-    document.write("Equilátero!")
+let A = Number(prompt("Digite o valor do lado A do triângulo:"));
+let B = Number(prompt("Digite o valor do lado B do triângulo:"));
+let C = Number(prompt("Digite o valor do lado C do triângulo:"));
+
+if (A < B + C && B < A + C && C < A + B) {
+    if (A == B && B == C) {
+        document.write("Triângulo equilátero.");
+    } else if (A == B || A == C || B == C) {
+        document.write("Triângulo isóceles.");
+    } else {
+        document.write("Triângulo escaleno.");
+    }
 } else {
-    document.write('Nao e um triangulo')
+    document.write("Os lados fornecidos não formam um triângulo.");
 }
+
+
+// let a = Number(prompt("Digite o lado A do triangulo: "));
+// let b = Number(prompt("Digite o lado B do triangulo: "));
+// let c = Number(prompt("Digite o lado C do triangulo: "));
+
+// if(a<b && b<a+c && c<a+b){
+//     document.write("É um triangulo!");
+// } else if((a==b && a!==c) || (a==c && a!==b) || (b==c && b!==a)){
+//     document.write("Isósceles!");
+// } else if(a!==b && a!==c && b!==c){
+//     document.write("Escaleno!");
+// } else if (a==b && a==c && b==c){
+//     document.write("Equilátero!")
+// } else {
+//     document.write('Nao e um triangulo')
+// }

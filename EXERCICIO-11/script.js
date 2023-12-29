@@ -4,19 +4,19 @@
 // “Bom dia!” ou “Boa tarde” ou “Boa Noite” ou “Valor inválido”,
 // conforme o caso.
 
-let turno = prompt('Digite a primeira letra  do turno em que voce estuda ')
+let turno = prompt('Digite a primeira letra  do turno em que você estuda (M, V, ou N) ');
 
 switch (turno) {
     case 'm' :
-        alert('seu turno e Manha')
+        alert('Bom dia');
         break;
     case 'v' :
-        alert('seu turno e Vesperino')
+        alert('Boa tarde');
         break;
     case 'n' :
-        alert('seu turno e Noite')
+        alert('Boa noite');
         break;
     default:
-        alert ('digite corretamente a primeira letra ')
+        alert ('Valor inválido ');
         break;
 }

@@ -7,16 +7,21 @@
 // a soma dos votos brancos, nulos e válidos não seja maior que o
 // número total de eleitores.
 
-let eleitores = Number(prompt("Digite o numero de eleitores: "));
-let brancos = Number(prompt("Quantos foram brancos: "));
-let nulos = Number(prompt("Quantos foram nulos: "));
-let validos = eleitores - brancos - nulos;
+let totalEleitores = Number(prompt("Digite o número total de eleitores:"));
+let votosBrancos = Number(prompt("Digite o número de votos brancos:"));
+let votosNulos = Number(prompt("Digite o número de votos nulos:"));
+let votosValidos = Number(prompt("Digite o número de votos válidos:"));
 
-if((brancos+nulos+validos)>eleitores){
-    document.write('ha mais votos que habitantes no seu municipio !')
+if (votosBrancos + votosNulos + votosValidos <= totalEleitores) {
+    let perVotosBrancos = (votosBrancos / totalEleitores) * 100;
+    let perVotosNulos = (votosNulos / totalEleitores) * 100;
+    let perVotosValidos = (votosValidos / totalEleitores) * 100;
+
+    document.write(`Percentual de votos brancos: ${perVotosBrancos.toFixed(2)}% <br>`);
+    document.write(`Percentual de votos nulos: ${perVotosNulos.toFixed(2)}% <br>`);
+    document.write(`Percentual de votos válidos: ${perVotosValidos.toFixed(2)}%`);
+
+} else {
+    document.write(`Erro: a soma dos votos brancos, nulos e válidos é maior que o número total de eleitores!!!`);
 }
-else if((brancos + nulos + validos) <= eleitores){
-    document.write(`Votos nulos ${nulos} representam ` + (nulos/eleitores)*100 + "%<br>")
-    document.write(`Votos brancos ${brancos} representam ` + (brancos/eleitores)*100 + "%<br>")
-    document.write(`Votos validos ${validos} representam ` + (validos/eleitores)*100 + "%<br>")
-}
+
